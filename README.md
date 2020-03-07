@@ -5,7 +5,7 @@
 Assume the target $x_d = 1.0$, the initial value $x_0 = 0.1$ and the iterative step $size = 100$.
 
 ```
-from pid import PID_Controller
+from controller import PID_Controller
 pid = PID_Controller(xd = 1.0, x0 = 0.1, size = 100)
 ```
 
