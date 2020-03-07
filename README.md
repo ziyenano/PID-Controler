@@ -5,10 +5,11 @@
 Assume the target $x_d = 1.0$, the initial value $x_0 = 0.1$ and the iterative step $size = 100$.
 
 ```
+from pid import PID_Controller
 pid = PID_Controller(xd = 1.0, x0 = 0.1, size = 100)
 ```
 
-It can arrive the destination only by the aid of P controller.
+It can arrive the destination just by the aid of P controller.
 
 ```
 pid.P_control(kp = 0.5, c = 0)
@@ -17,7 +18,7 @@ pid.plot()
 
 ![figure_1](./pic/figure_1.png)
 
-When we add an error $c \neq 0$, the system can not achieve the goal due to a static error.
+When we add an error $c \neq 0$, the system can never achieve the goal due to a static error.
 
 ```
 pid.P_control(kp = 0.5, c = 0.2)
